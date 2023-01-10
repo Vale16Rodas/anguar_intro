@@ -1,0 +1,23 @@
+
+<div *ngIf=" heroeBorrado!=''; else noBorrado "><!--solo aparece si el ngif = true se puede colocar heroeBorrado solamente-->
+    <h3>Héroe Borrado: <small>{{heroeBorrado}}</small></h3>
+    
+</div>
+
+<ng-template #noBorrado><!--referencia local  #noBorrado else-->
+        <h3>No ha borrado nada. </h3>
+</ng-template>
+
+
+
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+<!--directivas estructurales para manipular el dom-->
+<p>listado de heroes</p>
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index"><!--ciclo for del arreglo guardado en heroe y el nómero en i-->
+       {{i+1}}.- {{heroe}}
+    </li>
+</ul>
+
