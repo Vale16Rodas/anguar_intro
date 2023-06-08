@@ -5,8 +5,14 @@ import { Component } from '@angular/core';
   templateUrl:'app.component.html'//ruta del html
 })
 
-export class AppComponent {
-  
+export class AppComponent implements ngOnInit(): void {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+ ngOnInit() {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+  console.log('cambio we');
+ } 
 }
 /*
 
